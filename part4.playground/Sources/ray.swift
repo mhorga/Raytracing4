@@ -32,15 +32,6 @@ struct Camera {
     }
 }
 
-func random_in_unit_disk() -> float3 {
-    var p: float3
-    repeat {
-        p = 2.0 * float3(Float(drand48()), Float(drand48()), Float(drand48())) - float3(1, 1, 1)
-    } while dot(p, p) > 1
-    return p
-}
-
-
 func random_in_unit_sphere() -> float3 {
     var p = float3()
     repeat {
