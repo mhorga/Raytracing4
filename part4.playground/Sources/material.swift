@@ -63,10 +63,6 @@ struct Dielectric: Material {
     }
 }
 
-func reflect(v: float3, n: float3) -> float3 {
-    return v - 2 * dot(v, n) * n;
-}
-
 func refract(v: float3, n: float3, ni_over_nt: Float) -> float3? {
     let uv = normalize(v)
     let dt = dot(uv, n)
